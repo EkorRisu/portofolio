@@ -31,11 +31,11 @@ const galleryImages = [
 
 const Gallery = () => {
   return (
-    <div className="min-h-screen bg-gray-9absolute inset-0 bg-gray-700 opacity-100 flex flex-col items-center">
+    <div id='project' className="min-h-screen bg-gray-9absolute inset-0 bg-gray-700 opacity-100 flex flex-col items-center">
       <Head>
-        <title>Gallery</title>
+        <title>My Project</title>
       </Head>
-      <h1 className="text-4xl font-bold text-white mt-10">Gallery</h1>
+      <h1 className="text-4xl font-bold text-white mt-10">My Project</h1>
       <div className="container mx-auto py-8 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {galleryImages.map((image, index) => (
           <div key={index} className="bg-gray-800 rounded-lg overflow-hidden shadow-md">

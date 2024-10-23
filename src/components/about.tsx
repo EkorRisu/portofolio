@@ -81,7 +81,7 @@ const About = () => {
 
         {/* Tombol Aksi */}
         <a
-          href="#portfolio"
+          href="#project"
           className="mt-4 inline-block bg-white text-gray-900 px-6 py-2 rounded-full shadow hover:bg-gray-200 transition duration-300"
         >
           Check Out My Work
