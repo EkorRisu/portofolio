@@ -15,3 +15,21 @@ html {
 .animate-blink {
   animation: blink 1s steps(2, start) infinite;
 }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.7s ease-in forwards;
+}
+
+.animate-fadeOut {
+  animation: fadeOut 0.7s ease-out forwards;
+}

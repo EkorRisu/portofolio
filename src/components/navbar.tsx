@@ -31,7 +31,7 @@ const Navbar = () => {
               className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
             />
           </a>
-          <a href="#services" className="block sm:inline-block text-white text-sm px-2 py-1 hover:text-gray-300 relative group">Project
+          <a href="#project" className="block sm:inline-block text-white text-sm px-2 py-1 hover:text-gray-300 relative group">Project
           <span
               className="absolute bottom-[-2px] left-0 w-full h-[2px] bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
             />
