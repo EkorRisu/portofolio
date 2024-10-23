@@ -7,37 +7,44 @@ import { Lexend_Deca } from "next/font/google";
 const lexendDeca = Lexend_Deca({ subsets: ['latin'], weight: '400' });
 
 const Hero = () => {
-    //teks h5
-    const textArray=[
-        "Beginner Photographer",
-        "Beginner UI/UX Design",
-        "Hardware Athusiast",
-        "Petrol Head",
-        "Transportation Anthusiast",
-        "Weeb"
-    ];
-    const [currentTextIndex, setCurrentTextIndex] = useState(0);
+    const [text, setText] = useState("");
+    const [index, setIndex] = useState(0);
+    const phrases = ["Beginner Photographer", "Tech Enthusiast", "Transportation Authusiast", "Beginner UI/UX", "Petrol Head"];
 
+    // Typewriter Effect
     useEffect(() => {
-        // Timer untuk mengganti teks
-        const intervalId = setInterval(() => {
-            setCurrentTextIndex((prevIndex) => (prevIndex + 1) % textArray.length);
-        }, 5000);
+        const currentPhrase = phrases[index % phrases.length];
+        const timeout = setTimeout(
+            () => {
+                setText((prev) =>
+                    prev.length < currentPhrase.length
+                        ? currentPhrase.slice(0, prev.length + 1)
+                        : ""
+                );
 
-        return () => clearInterval(intervalId); // Membersihkan interval saat komponen unmount
-    }, []);
+                if (text === "") {
+                    setIndex((prev) => prev + 1);
+                }
+            },
+            text === currentPhrase ? 1500 : 150
+        );
+
+        return () => clearTimeout(timeout);
+    }, [text, index]);
+
 
     return (
-        <div id="hero" 
+        <div id="hero"
             className={`bg-[url('/wallpaper.jpg')] ${lexendDeca.className} bg-cover bg-center h-screen flex flex-col justify-center items-center`}>
             <div className="bg-black bg-opacity-40 bg-cover rounded-md p-20 text-center">
                 <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl leading-tight">
                     Hi, I'm Wayan
                 </h1>
                 {/* Typewriter effect for h5 */}
-                <h5 className="text-gray-300 text-lg sm:text-xl mt-2 border-r-4 border-gray-300 whitespace-nowrap overflow-hidden animate-typing">
-                        {textArray[currentTextIndex]}
-                </h5>
+                <h2 className="text-2xl md:text-3xl text-secondary mt-2 h-8 text-white/70">
+                    {text}
+                    <span className="animate-blink">|</span>
+                </h2>
             </div>
         </div>
     );

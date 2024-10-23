@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
-  
+}
+
+.animate-blink {
+  animation: blink 1s steps(2, start) infinite;
+}
