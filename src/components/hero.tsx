@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { Lexend_Deca } from "next/font/google";
+import { FiInstagram } from "react-icons/fi";
+import { FaFacebook, FaSpotify, FaXTwitter } from "react-icons/fa6";
 
 // Impor font
 const lexendDeca = Lexend_Deca({ subsets: ['latin'], weight: '400' });
@@ -45,7 +47,7 @@ const Hero = () => {
                     {text}
                     <span className="animate-blink">|</span>
                 </h2>
-            </div>
+             </div>
         </div>
     );
 };
