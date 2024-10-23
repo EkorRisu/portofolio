@@ -11,7 +11,7 @@ const lexendDeca = Lexend_Deca({ subsets: ['latin'], weight: '400' });
 const Hero = () => {
     const [text, setText] = useState("");
     const [index, setIndex] = useState(0);
-    const phrases = ["Beginner Photographer", "Tech Enthusiast", "Transportation Authusiast", "Beginner UI/UX", "Petrol Head"];
+    const phrases = ["Beginner Photographer", "Tech Enthusiast", "Transportation Enthusiast", "Beginner UI/UX", "PetrolHead"];
 
     // Typewriter Effect
     useEffect(() => {
