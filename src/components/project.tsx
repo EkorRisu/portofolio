@@ -3,8 +3,14 @@
 import Head from 'next/head';
 import { useState } from 'react';
 
+// Tipe untuk gambar di galeri
+type GalleryImage = {
+  src: string;
+  alt: string;
+};
+
 // Daftar gambar
-const galleryImages = [
+const galleryImages: GalleryImage[] = [
   {
     src: '/BNI citY.jpg',
     alt: 'Project 1 Description',
@@ -37,9 +43,10 @@ const galleryImages = [
 ];
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
-  const openModal = (image) => {
+  // Menentukan tipe parameter sebagai GalleryImage
+  const openModal = (image: GalleryImage) => {
     setSelectedImage(image);
   };
 
@@ -95,4 +102,3 @@ const Gallery = () => {
 };
 
 export default Gallery;
- 

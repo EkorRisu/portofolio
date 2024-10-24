@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,21 +11,29 @@ const Contact = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
 
-  const handleChange = (e) => {
+  // Typing the event as ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const formAction = (e) => {
+  // Typing the event as FormEvent<HTMLFormElement>
+  const formAction = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formData.message) {
       setError('Message is required.');
       return;
     }
-    
-    console.log(formData, "Form Value");
+
+    // Simulate form submission success
     setSuccess(true);
+    setError('');
     setFormData({ name: '', email: '', message: '' });
+
+    // Reset success message after 3 seconds
+    setTimeout(() => {
+      setSuccess(false);
+    }, 3000);
   };
 
   return (
