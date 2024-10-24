@@ -1,9 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from "react";
-import { Lexend_Deca } from "next/font/google";
-import { FiInstagram } from "react-icons/fi";
-import { FaFacebook, FaSpotify, FaXTwitter } from "react-icons/fa6";
+import { Lexend_Deca } from "next/font/google"; 
 
 // Impor font
 const lexendDeca = Lexend_Deca({ subsets: ['latin'], weight: '400' });

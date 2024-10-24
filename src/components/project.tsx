@@ -2,7 +2,6 @@
 // pages/gallery.js
 import Head from 'next/head';
 import { useState } from 'react';
-import Image from "next/image";
 
 // Daftar gambar
 const galleryImages = [
