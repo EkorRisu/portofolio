@@ -51,7 +51,7 @@ const Gallery = () => {
   return (
     <div id="project" className="min-h-screen bg-gray-900 flex flex-col items-center">
       <Head>
-        <title>My Project</title>
+        <title>My Gallery</title>
       </Head>
       <h1 className="text-4xl font-bold text-white mt-10">My Project</h1>
       <div className="container mx-auto py-8 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
