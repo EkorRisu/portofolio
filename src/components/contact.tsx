@@ -31,7 +31,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen relative bg-black py-16 px-4 md:px-8 text-white flex flex-col items-center justify-center overflow-hidden"
+      className="min-h-screen relative bg-gray-700 py-16 px-4 md:px-8 text-white flex flex-col items-center justify-center overflow-hidden"
     >
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="min-h-screen bg-gray-700 opacity-100"></div>

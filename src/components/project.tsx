@@ -19,7 +19,7 @@ const galleryImages = [
     alt: 'Project 3 Description',
   },
   {
-    src: '/st-theresia.jpg',
+    src: '/STtheresia.png',
     alt: 'Project 4 Description',
   },
   {
@@ -31,7 +31,7 @@ const galleryImages = [
     alt: 'Project 6 Description',
   },
   {
-    src: '/Night-Jakarta.jpg',
+    src: '/NightJakarta.png',
     alt: 'Project 7 Description',
   },
   // Tambahkan lebih banyak gambar sesuai kebutuhan
