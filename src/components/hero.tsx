@@ -38,7 +38,7 @@ const Hero = () => {
             className={`bg-[url('/wallpaper.jpg')] ${lexendDeca.className} bg-cover bg-center h-screen flex flex-col justify-center items-center`}>
             <div className="bg-black bg-opacity-40 bg-cover rounded-md p-20 text-center">
                 <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl leading-tight">
-                    Hi, I'm Wayan
+                    Hi, Iam Wayan
                 </h1>
                 {/* Typewriter effect for h5 */}
                 <h2 className="text-2xl md:text-3xl text-secondary mt-2 h-8 text-white/70">
