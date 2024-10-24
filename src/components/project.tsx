@@ -53,7 +53,7 @@ const Gallery = () => {
       <Head>
         <title>My Gallery</title>
       </Head>
-      <h1 className="text-4xl font-bold text-white mt-10">My Project</h1>
+      <h1 className="text-4xl font-bold text-white mt-10">My Gallery</h1>
       <div className="container mx-auto py-8 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {galleryImages.map((image, index) => (
           <div key={index} className="bg-gray-800 rounded-lg overflow-hidden shadow-md">
@@ -64,7 +64,7 @@ const Gallery = () => {
               onClick={() => openModal(image)}
             />
             <div className="p-4">
-              <p className="text-gray-300">{image.alt}</p>
+              {/* <p className="text-gray-300">{image.alt}</p> */}
             </div>
           </div>
         ))}
